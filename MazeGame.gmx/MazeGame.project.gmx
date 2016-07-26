@@ -79,6 +79,7 @@
     <room>rooms\Level3</room>
     <room>rooms\Level4</room>
     <room>rooms\Level5</room>
+    <room>rooms\SecretLevel</room>
     <room>rooms\Final</room>
   </rooms>
   <help>
