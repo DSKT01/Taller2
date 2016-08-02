@@ -105,12 +105,13 @@ Ring = false;
             <string>/// movimiento
 if Ring = true then
 {
-velocidad = 7;
+velocidad = 8;
 
 }
+
 else
 {
-velocidad = 4;
+velocidad = 5;
 }
 if (sprite_index = sprDead) then
 {
@@ -146,6 +147,11 @@ if (keyboard_check (ord("W")))||(keyboard_check (vk_up)) then {sprite_index = sp
 if (keyboard_check (ord("A")))||(keyboard_check (vk_left)) then {sprite_index = sprPersonajeA;}
 if (keyboard_check (ord("S")))||(keyboard_check (vk_down)) then {sprite_index = sprPersonajeS;}
 if (keyboard_check (ord("D")))||(keyboard_check (vk_right)) then {sprite_index = sprPersonajeD;}
+}
+
+if (!((keyboard_check(ord("W")))||(keyboard_check (vk_up))||(keyboard_check (ord("A")))||(keyboard_check (vk_left))||(keyboard_check (ord("S")))||(keyboard_check (vk_down))||(keyboard_check (ord("D")))||(keyboard_check (vk_right)))) then 
+{
+move_snap (32,32);
 }
 </string>
           </argument>
