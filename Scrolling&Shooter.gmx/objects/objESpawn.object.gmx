@@ -38,13 +38,12 @@ EW4 = sprite_get_width(sprEnemy4)
 EH4 = sprite_get_height(sprEnemy4)
 
 instance_create (irandom_range(EW1/2,room_width-EW1/2), -10-EH1, objEnemy1)
-instance_create (irandom_range(EW1/2,room_width-EW1/2), -20-EH1, objEnemy1)
-instance_create (irandom_range(EW1/2,room_width-EW1/2), -50-EH1, objEnemy1)
 
-alarm[0] = 300
-alarm[1]= 600
-alarm[2]= 1000
-alarm[3]= 3000
+
+alarm[0] = 100
+alarm[1]= 2500
+alarm[2]= 5000
+alarm[3]= 10000
 
 timeline_index=tmlEnemigos;
 timeline_position=0;
@@ -71,8 +70,25 @@ timeline_running=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create (irandom_range(EW4/2,room_width-EW4/2),room_height +EH4, objEnemy4)
-alarm[3]= 1000
+            <string>instance_create(320,-40,objEnemy3)
+instance_create(352,-72,objEnemy3)
+instance_create(384,-104,objEnemy3)
+instance_create(416,-136,objEnemy3)
+instance_create(448,-168,objEnemy3)
+instance_create(288,-72,objEnemy3)
+instance_create(256,-104,objEnemy3)
+instance_create(224,-136,objEnemy3)
+instance_create(192,-168,objEnemy3)
+instance_create(320,-40,objEnemy3)
+instance_create(352,-72,objEnemy3)
+instance_create(384,-104,objEnemy3)
+instance_create(416,-136,objEnemy3)
+instance_create(448,-168,objEnemy3)
+instance_create(288,-72,objEnemy3)
+instance_create(256,-104,objEnemy3)
+instance_create(224,-136,objEnemy3)
+instance_create(192,-168,objEnemy3)
+alarm[3]= 5000
 </string>
           </argument>
         </arguments>
@@ -95,9 +111,17 @@ alarm[3]= 1000
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create (irandom_range(EW3/2,room_width-EW3/2), -EH3, objEnemy3)
+            <string>instance_create(320,-40,objEnemy1)
+instance_create(352,-72,objEnemy2)
+instance_create(384,-104,objEnemy3)
+instance_create(416,room_height+136,objEnemy4)
+instance_create(448,-168,objEnemy1)
+instance_create(288,-72,objEnemy2)
+instance_create(256,-104,objEnemy3)
+instance_create(224,room_height+136,objEnemy4)
+instance_create(192,-168,objEnemy1)
 
-alarm[2]=500
+alarm[2]=3000
 </string>
           </argument>
         </arguments>
@@ -120,9 +144,17 @@ alarm[2]=500
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create (irandom_range(EW2/2,room_width-EW2/2), -EH2, objEnemy2)
+            <string>instance_create(320,-40,objEnemy1)
+instance_create(352,-72,objEnemy2)
+instance_create(384,-104,objEnemy1)
+instance_create(416,-136,objEnemy2)
+instance_create(448,-168,objEnemy1)
+instance_create(288,-72,objEnemy2)
+instance_create(256,-104,objEnemy1)
+instance_create(224,-136,objEnemy2)
+instance_create(192,-168,objEnemy1)
 
-alarm[1]=400
+alarm[1]=2000
 </string>
           </argument>
         </arguments>
@@ -145,10 +177,17 @@ alarm[1]=400
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create (irandom_range(EW1/2,room_width-EW1/2), -EH1, objEnemy1)
-instance_create (irandom_range(EW1/2,room_width-EW1/2), -EH1, objEnemy1)
+            <string>instance_create(320,-40,objEnemy1)
+instance_create(352,-72,objEnemy1)
+instance_create(384,-104,objEnemy1)
+instance_create(416,-136,objEnemy1)
+instance_create(448,-168,objEnemy1)
+instance_create(288,-72,objEnemy1)
+instance_create(256,-104,objEnemy1)
+instance_create(224,-136,objEnemy1)
+instance_create(192,-168,objEnemy1)
 
-alarm[0]= 200
+alarm[0]= 700
 </string>
           </argument>
         </arguments>
@@ -171,29 +210,57 @@ alarm[0]= 200
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var rdm = floor(random(990000)) + 1;
+            <string>var rdm = floor(random(990)) + 1;
 if (rdm == 2) then
 {
-instance_create (irandom_range(EW1/2,room_width-EW1/2), -EH1, objEnemy1)
-instance_create (irandom_range(EW1/2,room_width-EW1/2), -EH1, objEnemy1)
+instance_create(320,-40,objEnemy1)
+instance_create(352,-72,objEnemy1)
+instance_create(384,-104,objEnemy1)
+instance_create(416,-136,objEnemy1)
+instance_create(448,-168,objEnemy1)
+instance_create(288,-72,objEnemy1)
+instance_create(256,-104,objEnemy1)
+instance_create(224,-136,objEnemy1)
+instance_create(192,-168,objEnemy1)
 }
-var rdm2 = floor(random(9900000)) + 1;
+var rdm2 = floor(random(9900)) + 1;
 if (rdm2 == 2) then
 {
-instance_create (irandom_range(EW2/2,room_width-EW2/2), -EH2, objEnemy2)
-instance_create (irandom_range(EW2/2,room_width-EW2/2), -EH2, objEnemy2)
+instance_create(320,-40,objEnemy2)
+instance_create(352,-72,objEnemy2)
+instance_create(384,-104,objEnemy2)
+instance_create(416,-136,objEnemy2)
+instance_create(448,-168,objEnemy2)
+instance_create(288,-72,objEnemy2)
+instance_create(256,-104,objEnemy2)
+instance_create(224,-136,objEnemy2)
+instance_create(192,-168,objEnemy2)
 }
-var rdm3 = floor(random(990000000)) + 1;
+var rdm3 = floor(random(990000)) + 1;
 if (rdm3 == 2) then
 {
-instance_create (irandom_range(EW3/2,room_width-EW3/2), -EH3, objEnemy3)
-instance_create (irandom_range(EW3/2,room_width-EW3/2), -EH3, objEnemy3)
+instance_create(320,-40,objEnemy3)
+instance_create(352,-72,objEnemy3)
+instance_create(384,-104,objEnemy3)
+instance_create(416,-136,objEnemy3)
+instance_create(448,-168,objEnemy3)
+instance_create(288,-72,objEnemy3)
+instance_create(256,-104,objEnemy3)
+instance_create(224,-136,objEnemy3)
+instance_create(192,-168,objEnemy3)
 }
-var rdm4 = floor(random(990000000000)) + 1;
+var rdm4 = floor(random(990000000)) + 1;
 if (rdm4 == 2) then
 {
-instance_create (irandom_range(EW4/2,room_width-EW4/2),room_height +EH4, objEnemy4)
-instance_create (irandom_range(EW4/2,room_width-EW4/2),room_height +EH4, objEnemy4)
+instance_create(320,room_height+40,objEnemy4)
+instance_create(352,room_height+72,objEnemy4)
+instance_create(384,room_height+104,objEnemy4)
+instance_create(416,room_height+136,objEnemy4)
+instance_create(448,room_height+168,objEnemy4)
+instance_create(288,room_height+72,objEnemy4)
+instance_create(256,room_height+104,objEnemy4)
+instance_create(224,room_height+136,objEnemy4)
+instance_create(192,room_height+168,objEnemy4)
 }
 </string>
           </argument>

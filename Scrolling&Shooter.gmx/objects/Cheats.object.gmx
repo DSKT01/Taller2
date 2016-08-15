@@ -29,6 +29,37 @@
 global.vidas=0;
 global.velocidad=0;
 global.inmunidad=0;
+global.fast = false;
+inmune = false;
+inmune2 = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (inmune2 = false) then
+{
+global.inmunidad = 100
+alarm[11]=14
+inmune = true
+}
 </string>
           </argument>
         </arguments>
@@ -182,8 +213,39 @@ if (cheat) = "pew" then
 {
 global.velocidad=100
 }
+else
+if (cheat) = "gotagofast" then
+{
+global.fast = true;
+}
+else
+if (cheat) = "gotagonormal" then
+{
+global.fast = false;
+}
+else
+if (cheat) = "inmortalon" then
+{
+global.inmunidad=100;
+inmune = true;
+inmune2 = false;
+}
+else
+if (cheat) = "inmortaloff" then
+{
+global.inmunidad=0;
+inmune = false;
+inmune2 = true;
+
+}
 }
 
+
+if (inmune) then
+{
+inmune = false
+alarm[11]= 14
+}
 
 </string>
           </argument>

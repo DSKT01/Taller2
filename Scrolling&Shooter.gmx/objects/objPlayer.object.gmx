@@ -99,7 +99,8 @@ qwerty = false;
           <argument>
             <kind>1</kind>
             <string>/// movimiento
-
+if (global.fast = false) then
+{
 w = (keyboard_check(ord("W")))||(keyboard_check(vk_up));
 s = (keyboard_check(ord("S")))||(keyboard_check(vk_down));
 a = (keyboard_check(ord("A")))||(keyboard_check(vk_left));
@@ -137,8 +138,47 @@ if (x&gt;sprite_height/2) then
 x = x-4
 }
 }
+}
+else if (global.fast = true)
+{
+w1 = (keyboard_check(ord("W")))||(keyboard_check(vk_up));
+s1 = (keyboard_check(ord("S")))||(keyboard_check(vk_down));
+a1 = (keyboard_check(ord("A")))||(keyboard_check(vk_left));
+d1 = (keyboard_check(ord("D")))||(keyboard_check(vk_right));
 
+if(w1) then
+{
+if (y&gt;sprite_height/2) then
+{
+y = y-6;
+}
+}
 
+if (s1) then
+{
+if (y&lt;room_height -76- sprite_height/2) then
+{
+y = y+9;
+}
+}
+if(d1) then
+{
+if (x&lt;room_width - sprite_width/2) then
+
+{
+x = x+12
+}
+}
+
+if (a1) then
+{
+if (x&gt;sprite_height/2) then
+
+{
+x = x-12
+}
+}
+}
 </string>
           </argument>
         </arguments>

@@ -25,11 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed=5;
+            <string>
 
 if (instance_number(objPlayer) &gt; 0) then
 {
 move_towards_point(objPlayer.x,objPlayer.y,5)
+}
+else
+{
+speed=5;
 }
 
 </string>
@@ -54,7 +58,7 @@ move_towards_point(objPlayer.x,objPlayer.y,5)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y&gt;room_height-sprite_height/2) then 
+            <string>if (y&gt;room_height+sprite_height/2)||(y&lt; -sprite_height/2)||(x &gt; room_width + sprite_width/2)||(x &lt; -sprite_width/2) then
 {
 instance_destroy();
 

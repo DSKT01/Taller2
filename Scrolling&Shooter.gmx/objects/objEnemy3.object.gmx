@@ -25,10 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 2.5;
+            <string>
+vspeed = 2.5;
+
 if (instance_number(objPlayer) &gt; 0) then
 {
 move_towards_point(objPlayer.x,objPlayer.y,2.5)
+}
+else
+{
+vspeed = 2.5;
 }
 
 </string>
@@ -53,7 +59,7 @@ move_towards_point(objPlayer.x,objPlayer.y,2.5)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y&gt;room_height+sprite_height/2)||(x &gt; room_width - sprite_width/2)||(x &lt; -sprite_width/2) then
+            <string>if (y&gt;room_height+sprite_height/2)||(x &gt; room_width + sprite_width/2)||(x &lt; -sprite_width/2) then
 {
 x=irandom_range(sprite_width/2,room_width-sprite_width/2);
 y= -100;
