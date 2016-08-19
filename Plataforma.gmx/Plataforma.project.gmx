@@ -7,6 +7,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprPlayerQ</sprite>
+    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\sprMalo1</sprite>
+    <sprite>sprites\sprPlayerA2</sprite>
     <sprite>sprites\sprPlayerD</sprite>
     <sprite>sprites\sprPlayerL</sprite>
     <sprite>sprites\sprBloque</sprite>
@@ -16,9 +19,20 @@
   <objects name="objects">
     <object>objects\objPlayer</object>
     <object>objects\objBloque</object>
+    <object>objects\objview</object>
+    <object>objects\objmeta</object>
+    <object>objects\object4</object>
+    <object>objects\object5</object>
+    <object>objects\object10</object>
+    <object>objects\object11</object>
+    <object>objects\asd</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room6</room>
+    <room>rooms\room3</room>
     <room>rooms\room0</room>
+    <room>rooms\room4</room>
+    <room>rooms\room5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

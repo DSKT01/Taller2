@@ -209,7 +209,7 @@ if(pew) then
 {
 instance_create (x,y-16,objBullet);
 pew = 0;
-alarm[0]=17;
+alarm[0]=15;
 }
 }
 

@@ -25,13 +25,37 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>g = 0.5;
+            <string>g = 1;
 hs = 0;
 vs = 0;
 ms = 4;
+global.dj = 2;
 js = -10;
-dj = 2;
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ms = 4;
 </string>
           </argument>
         </arguments>
@@ -75,17 +99,17 @@ x = x+hs
 
 if (jump) then
 {
-if (dj&gt;0) then
+if (global.dj&gt;0) then
 {
-vs = js 
-dj = dj -1
+vs = js
+global.dj = global.dj -1
 }
 }
 else 
 {
 if (!place_meeting (x, y+vs , objBloque)) then
 {
-if (vs &lt; 10) then
+if (vs &lt; 15) then
 {
 vs = vs + g
 }
@@ -102,17 +126,16 @@ vs = 0
 }
 y = y + vs 
 
-if (place_meeting (x, y+5 , objBloque)) then
+if (place_meeting (x, y+1 , objBloque)) then
 {
-dj = 2;
+if (global.dj &lt; 2) then
+{
+global.dj = 2;
+}
 }
 
 
 
-if (hs = 0) then
-{
-sprite_index = sprPlayerQ
-}
 if (hs &lt; 0) then
 {
 sprite_index = sprPlayerL
@@ -120,6 +143,39 @@ sprite_index = sprPlayerL
 if (hs &gt; 0) then
 {
 sprite_index = sprPlayerD
+}
+if (hs = 0) then
+{
+sprite_index = sprPlayerQ
+}
+
+
+if ((x&gt; room_width)||(x&lt;0)||(y&gt;room_height)||(y&lt;0)) then
+{
+room_restart();
+}
+if (place_meeting(x,y,object10)) then
+{
+room_restart();
+}
+
+if place_meeting(x,y,objmeta) then
+{
+if room_exists(room_next(room)) then
+{
+room_goto_next();
+}
+else
+{
+room_goto(room6)
+}
+}
+
+if (place_meeting(x,y,asd)) then
+{
+ms = 10;
+alarm[0] = 1000;
+
 }
 </string>
           </argument>
