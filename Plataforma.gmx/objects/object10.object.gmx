@@ -30,6 +30,7 @@ hs = 0;
 vs =0;
 ms = 5;
 d = 1;
+dead = 0;
 
 
 </string>
@@ -54,20 +55,22 @@ d = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rangox = ((15)*d)
+            <string>rangox = ((35)*d)
 
 
-if (place_empty (x+rangox,y+15)) then
+if (!(place_meeting (x+rangox,y+15,objBloquep))) then
 {
-if (place_empty (x+rangox,y)) then 
+if (!(place_meeting(x+rangox,y,objBloquep))) then 
 {
-
-if (place_empty (x+rangox,y+4)) then 
+if (!(place_meeting (x+rangox,y+4,objBloquep))) then 
 {
  d = -d
  }
 }
 }
+
+
+
 
 
 
@@ -91,6 +94,32 @@ y = y + vs
 if (!(place_empty(x, y+vs))) then
 {
 vs = 0;
+}
+
+if (dead &gt;= 2) then
+{
+instance_destroy();
+}
+if (place_meeting(x,y,objbala))
+{
+dead = dead + 1
+}
+
+
+
+
+
+if (place_meeting(x,y,objPlayer)) then
+{
+if (objPlayer.y &lt; y - 16) then
+{
+instance_destroy();
+with(objPlayer) vs = js;
+}
+else
+{
+room_restart();
+}
 }
 </string>
           </argument>

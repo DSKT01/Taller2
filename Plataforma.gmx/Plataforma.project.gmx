@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprPlayerQ</sprite>
+    <sprite>sprites\bala</sprite>
     <sprite>sprites\sprite7</sprite>
     <sprite>sprites\sprMalo1</sprite>
     <sprite>sprites\sprPlayerA2</sprite>
@@ -26,6 +27,8 @@
     <object>objects\object10</object>
     <object>objects\object11</object>
     <object>objects\asd</object>
+    <object>objects\objbala</object>
+    <object>objects\objBloquep</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room6</room>
